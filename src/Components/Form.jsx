@@ -1,4 +1,4 @@
-import React from "react";
+
 
 
 const Form = () => {
@@ -7,6 +7,11 @@ const Form = () => {
   return (
     <div>
       <form>
+        <label>Nombre Completo:</label>
+        <input type="text"/>
+        <label>Email:</label>
+        <input type="email"/>
+        <button type="submit">Contactar</button>
       </form>
     </div>
   );

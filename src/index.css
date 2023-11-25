@@ -79,6 +79,10 @@ form{
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
+.card-img{
+  max-width: 100%;
+  height: auto;
+}
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
@@ -95,12 +99,11 @@ form{
 }
 
 table {
- border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
     border: 1px solid #ccc;
-
 }
 
 td, th {
