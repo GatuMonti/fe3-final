@@ -25,6 +25,7 @@ const Detail = () => {
             <table>
                 <thead>
                     <tr>
+                        <th>Foto</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
@@ -33,6 +34,7 @@ const Detail = () => {
                 </thead>
                 <tbody>
                     <tr>
+                        <td><img className="img-perfil-dentista"src="/images/doctor.jpg" alt="Foto del dentista" /></td>
                         <td>{dentista.name}</td>
                         <td>{dentista.email}</td>
                         <td>{dentista.phone}</td>

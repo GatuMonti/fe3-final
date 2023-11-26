@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
 }
 
 code {
@@ -98,6 +98,10 @@ form{
   margin: 0 auto;
 }
 
+.msj-contact {    
+  text-align: center; /* Alinea el texto al centro */  
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -105,10 +109,13 @@ table {
     display: table;
     border: 1px solid #ccc;
 }
-
+.img-perfil-dentista{
+  width: 50px;
+  border-radius: 20px;  
+}
 td, th {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 
@@ -122,4 +129,8 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.dark > nav{
+  color: white
 }
