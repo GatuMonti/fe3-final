@@ -6,7 +6,7 @@ import Card from "../Components/Card";
 const Favs = () => {
     const [favsArray, setFavsArray] = useState([]);
     const [fav, setFav] = useState(() => false);
-    console.log();
+    
 
     useEffect(() => {
         const favoritos = JSON.parse(localStorage.getItem("favs")) || [];
@@ -19,7 +19,7 @@ const Favs = () => {
 
 
     return (
-        <>
+        <div>
             <h1>Dentists Favs</h1>
             <div className="card-grid">
                 {favsArray.length > 0 ? (
@@ -34,7 +34,7 @@ const Favs = () => {
                     <h3>No tiene dentistas marcados como favoritos</h3>
                 )}
             </div>
-        </>
+        </div>
     );
 };
 

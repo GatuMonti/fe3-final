@@ -7,10 +7,8 @@ const Home = () => {
 
 const {state} = useGlobalData();
 
-
-
   return (
-    <main className="" >
+    <main className={state.theme} >
       <h1>Home</h1>
       <div className='card-grid'>
         {state.dentistas.map(dentista=>(<Card key={`home${dentista.id}`} {...dentista} />))}            

@@ -4,7 +4,8 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale; 
+  
 }
 
 code {
@@ -17,15 +18,20 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
+  margin-bottom: 10px;  
 }
 
+.favButton:hover{
+  background-color: #2c2c2c92;
+  border: 0.5px solid black;
+}
 h1{
   text-align: center;
+  margin: 0;
 }
 
 nav{
-  display: flex;
-  width: 80vw;
+  display: flex;  
   justify-content: flex-start;
   padding: 1rem;
 }
@@ -46,10 +52,8 @@ footer {
   text-align: center;
   padding: 2rem;
   position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  bottom: 0;  
+  height: 40px;  
 }
 
 footer > img{
@@ -99,7 +103,7 @@ form{
 }
 
 .msj-contact {    
-  text-align: center; /* Alinea el texto al centro */  
+  text-align: center; 
 }
 
 table {
@@ -134,3 +138,13 @@ tr:nth-child(even) {
 .dark > nav{
   color: white
 }
+
+.dark > .favButton{
+  color:white;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+.dark > .favButton:hover{
+  background-color:rgba(240, 248, 255, 0.402);
+  border: 0.5px solid rgb(227, 227, 227);  
+}
+

@@ -31,7 +31,7 @@ const Detail = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img className="img-perfil-dentista"src="/images/doctor.jpg" alt="Foto del dentista" /></td>
+                        <td><img className="img-perfil-dentista" src="/images/doctor.jpg" alt="Foto del dentista" /></td>
                         <td>{state.dentista.detail.name}</td>
                         <td>{state.dentista.detail.email}</td>
                         <td>{state.dentista.detail.phone}</td>

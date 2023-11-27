@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useGlobalData } from "./utils/global.context";
 
 const Card = ({ id, name, username, handleButtonClick }) => {
     const [isFav, setIsFav] = useState(false);
+    const {state} = useGlobalData();
 
     useEffect(() => {
         const favorites = JSON.parse(localStorage.getItem("favs")) || [];
@@ -22,18 +24,17 @@ const Card = ({ id, name, username, handleButtonClick }) => {
         }
         localStorage.setItem("favs", JSON.stringify(updatedFavs));
         setIsFav(!isFav);
-        //Esto lo hago para poder eliminar los favoritos directamente de la ruta favs
-        //Para hacerlo por locarStorage y no por context como lo pide la consigna
+
         if (handleButtonClick) {
             handleButtonClick();
         }
     };
 
     return (
-        <Link className="card" to={`/detail/${id}`}>
+        <Link className={`card ${state.theme}`}  to={`/detail/${id}`}>
             <img
                 className="card-img"
-                src="images/doctor.jpg"
+                src="/images/doctor.jpg"
                 alt="Foto del dentista"
             />
             <h4>{name}</h4>
