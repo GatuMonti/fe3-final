@@ -1,23 +1,18 @@
-import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { useGlobalData } from "../Components/utils/global.context";
+import { useEffect } from "react";
+
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
     const param = useParams();
-    const [dentista, setDentista] = useState({});
-
-    // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-    const getDentista = async () => {
-        const res = await axios.get(
-            `https://jsonplaceholder.typicode.com/users/${param.id}`
-        );
-        setDentista(res.data);
-    };
-    useState(() => {
-        getDentista();
-    }, [dentista]);
+    
+    const {dentista, setDentista} = useGlobalData();
+    useEffect(()=>{
+        setDentista(prev=>({...prev,paramDent:param.id}))        
+    },[param])     
+    
 
     return (
         <>
@@ -35,10 +30,10 @@ const Detail = () => {
                 <tbody>
                     <tr>
                         <td><img className="img-perfil-dentista"src="/images/doctor.jpg" alt="Foto del dentista" /></td>
-                        <td>{dentista.name}</td>
-                        <td>{dentista.email}</td>
-                        <td>{dentista.phone}</td>
-                        <td>{dentista.website}</td>
+                        <td>{dentista.fav.name}</td>
+                        <td>{dentista.fav.email}</td>
+                        <td>{dentista.fav.phone}</td>
+                        <td>{dentista.fav.website}</td>
                     </tr>
                 </tbody>
             </table>
