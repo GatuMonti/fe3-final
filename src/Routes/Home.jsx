@@ -5,14 +5,15 @@ import Card from '../Components/Card'
 
 const Home = () => {
 
-const {dentistas} = useGlobalData();
+const {state} = useGlobalData();
+
 
 
   return (
     <main className="" >
       <h1>Home</h1>
       <div className='card-grid'>
-        {dentistas.map(dentista=>(<Card key={`home${dentista.id}`} {...dentista} />))}            
+        {state.dentistas.map(dentista=>(<Card key={`home${dentista.id}`} {...dentista} />))}            
       </div>
     </main>
   )

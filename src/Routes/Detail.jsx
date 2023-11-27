@@ -8,10 +8,12 @@ import { useEffect } from "react";
 const Detail = () => {
     const param = useParams();
     
-    const {dentista, setDentista} = useGlobalData();
+    const { state, dispatch } = useGlobalData();
+
+    
     useEffect(()=>{
-        setDentista(prev=>({...prev,paramDent:param.id}))        
-    },[param])     
+        dispatch({type:"SAVE_ID_PARAM",payload: param.id })          
+    },[param.id]) 
     
 
     return (
@@ -30,10 +32,10 @@ const Detail = () => {
                 <tbody>
                     <tr>
                         <td><img className="img-perfil-dentista"src="/images/doctor.jpg" alt="Foto del dentista" /></td>
-                        <td>{dentista.fav.name}</td>
-                        <td>{dentista.fav.email}</td>
-                        <td>{dentista.fav.phone}</td>
-                        <td>{dentista.fav.website}</td>
+                        <td>{state.dentista.detail.name}</td>
+                        <td>{state.dentista.detail.email}</td>
+                        <td>{state.dentista.detail.phone}</td>
+                        <td>{state.dentista.detail.website}</td>
                     </tr>
                 </tbody>
             </table>
