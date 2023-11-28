@@ -17,7 +17,7 @@ const Detail = () => {
     
 
     return (
-        <>
+        <div className={`details ${state.theme}`}>
             <h1>Detail Dentist id {param.id}</h1>
             <table>
                 <thead>
@@ -39,7 +39,7 @@ const Detail = () => {
                     </tr>
                 </tbody>
             </table>
-        </>
+        </div>
     );
 };
 

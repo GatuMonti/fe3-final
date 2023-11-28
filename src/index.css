@@ -1,10 +1,12 @@
-body {
-  margin: 0;
+*{
+  margin:0 auto;
+}
+body {  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;   
   
 }
 
@@ -12,6 +14,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
@@ -26,14 +29,39 @@ code {
   border: 0.5px solid black;
 }
 h1{
-  text-align: center;
-  margin: 0;
+  text-align: center;   
+  padding: 30px; 
+}
+h2 span{
+  color:red;
 }
 
 nav{
   display: flex;  
-  justify-content: flex-start;
-  padding: 1rem;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px; 
+  background-color: #ccc; 
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.changeThemeButton{
+  border: 0px;
+  width: 40px;
+  padding: 5px;
+  background-color: #000;
+  border-radius: 5px;
+  cursor: pointer;  
+  font-size: large;
+}
+
+.changeThemeButton:hover{
+  background-color: #000000a4;
 }
 
 a{
@@ -46,6 +74,7 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
+
 footer {
   display: flex;
   justify-content: center;
@@ -54,24 +83,27 @@ footer {
   position: relative;
   bottom: 0;  
   height: 40px;  
+  background-color: #ccc;   
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
+footer div > img{
+  width: 200px;  
 }
 footer > p{
-  margin: 0;
   padding-top: 0.7rem;
 }
+
 
 form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
+  font-size: large;
+  padding-bottom: 50px;
+}
+form input, form button{
+  font-size: large;
+  margin-top: 5px;
 }
 
 .card{
@@ -87,7 +119,9 @@ form{
   max-width: 100%;
   height: auto;
 }
-
+.card h4, .card p{
+  margin: 5px
+}
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
 }
@@ -96,10 +130,10 @@ form{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
+  width: 65%;
   height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  flex-wrap: wrap; 
+  padding-bottom: 50px; 
 }
 
 .msj-contact {    
@@ -109,9 +143,13 @@ form{
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    width: 50%;
     display: table;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;       
+}
+
+.details{
+  padding-bottom: 50px;
 }
 .img-perfil-dentista{
   width: 50px;
@@ -134,9 +172,16 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+.dark > a:hover{
+  color: rgb(67, 66, 66);
+}
 
-.dark > nav{
-  color: white
+nav.dark{  
+  background-color:rgb(2, 2, 20);
+}
+
+.dark.menu{
+  background-color: transparent;  
 }
 
 .dark > .favButton{
@@ -147,4 +192,17 @@ tr:nth-child(even) {
   background-color:rgba(240, 248, 255, 0.402);
   border: 0.5px solid rgb(227, 227, 227);  
 }
+
+.dark > .changeThemeButton{
+  background-color: rgb(102, 192, 247);
+}
+
+.dark > .changeThemeButton:hover{
+  background-color:rgb(225, 228, 231);
+    
+}
+.dark.footer{
+  background-color:rgb(2, 2, 20);
+}
+
 

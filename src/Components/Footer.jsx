@@ -1,11 +1,14 @@
 import { useGlobalData } from "./utils/global.context"
 
 const Footer = () => {
-  const {state} = useGlobalData();
+  
+  const { state } = useGlobalData();
   return (
-    <footer className={state.theme}>
-        <p>Powered by</p>
-        <img src="/public/images/DH.png" alt='DH-logo' />
+    <footer className={`footer ${state.theme}`}>  
+        <div>
+          <p>Powered by</p>
+        <img src="/public/images/DH.png" alt='DH-logo' />    
+        </div>         
     </footer>
   )
 }

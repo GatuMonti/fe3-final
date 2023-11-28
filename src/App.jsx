@@ -3,13 +3,12 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 
 
-
 function App() {
-
+  
   return (
-      <div className="App" >
+      <div className="App">
           <Navbar/>
-          <Outlet/>
+          <Outlet/>          
           <Footer/>
       </div>
   );
