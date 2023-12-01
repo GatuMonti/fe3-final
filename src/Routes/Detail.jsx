@@ -6,13 +6,12 @@ import { useEffect } from "react";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
-    const param = useParams();
-    
+    const param = useParams();    
     const { state, dispatch } = useGlobalData();
 
     
     useEffect(()=>{
-        dispatch({type:"SAVE_ID_PARAM",payload: param.id })          
+        dispatch({type:"SAVE_ID_DENTISTA",payload: param.id })          
     },[param.id]) 
     
 

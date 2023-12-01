@@ -7,7 +7,7 @@ export const reducer = (state, accion) => {
                 ...state,
                 dentista: { ...state.dentista, detail: accion.payload },
             };
-        case "SAVE_ID_PARAM":
+        case "SAVE_ID_DENTISTA":
             return {
                 ...state,
                 dentista: { ...state.dentista, paramDent: accion.payload },
@@ -17,6 +17,13 @@ export const reducer = (state, accion) => {
                 ...state,
                 theme: accion.payload
             }
+        case "UPDATE_FAVS":
+            return {
+                ...state,
+                favs: accion.payload
+            }
+        
+
     }
 };
 

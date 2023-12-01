@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={`footer ${state.theme}`}>  
         <div>
           <p>Powered by</p>
-        <img src="/public/images/DH.png" alt='DH-logo' />    
+        <img src="/images/DH.png" alt='DH-logo' />    
         </div>         
     </footer>
   )

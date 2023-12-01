@@ -9,7 +9,8 @@ const initialState = {
   dentista:{
     detail:{},
     paramDent:1
-  }  
+  },
+  favs: [],
 }
 
 
@@ -29,16 +30,21 @@ const ContextProvider = ({ children }) => {
 
 
   //Llamada al detalle del dentista seleccionado--------------------  
-    useEffect(() => {
-      const getDentistaFav = async () => {
-        const res = await axios.get(
-            `https://jsonplaceholder.typicode.com/users/${state.dentista.paramDent}`
-        );                
-        dispatch({type:"GET_DENTISTA_DETAIL", payload:res.data})           
-      };
-        getDentistaFav();                
-    },[state.dentista.paramDent]);  
+  useEffect(() => {
+    const getDentistaDetail = async () => {
+      const res = await axios.get(
+          `https://jsonplaceholder.typicode.com/users/${state.dentista.paramDent}`
+      );                
+      dispatch({type:"GET_DENTISTA_DETAIL", payload:res.data})           
+    };
+      getDentistaDetail();                
+  },[state.dentista.paramDent]);
 
+  
+  //Insertar los favoritos en el localStorage cada vez que cada ves que se modifique el listado de favoritos 
+  useEffect(()=>{
+    localStorage.setItem("favs",JSON.stringify(state.favs))
+  },[state.favs])
 
   return (
     <ContextGlobal.Provider value={{
